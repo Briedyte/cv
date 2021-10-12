@@ -1,0 +1,139 @@
+@use '../globals' as g;
+@use '../helpers';
+
+header {
+    height: 100vh;
+    ul {
+        position: relative;
+        top: 4%;
+        left: 6%;
+        max-width: 80vw;
+        a {
+            font-size: 0.8rem;
+        }
+        li::before { 
+            content: "";
+            background-color: g.$primaryColor;
+            display: inline-block;
+            vertical-align: middle;
+            height: 1px;
+            width: 3%;
+            margin-right: 1%;
+        }
+    }
+    .intro-content.active {
+        display: block;
+        visibility: visible;
+        animation: fadeIn 4s forwards;
+    }
+    .intro-content {
+        display: none;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+        min-width: 80%;
+        max-width: 1500px;
+        transition: all 3s;
+        .profile-img {
+            display: block;
+            border-radius: 50%;
+            width: 49vmin;
+            height: 49vmin;
+            margin: 0 auto;
+            box-shadow: 0 0 0 0.4vmin inset g.$secondaryColor,
+                        -10px 10px 16px inset #181818;
+            img {
+                position: relative;
+                top: 5vmin;
+                left: 2vmin;
+                width: 40vmin;
+                height: 45vmin;
+                object-fit: cover;
+                border-radius: 50% 50% 0 0;
+                z-index: 2;
+            }
+        }
+        .circle {
+            width: 48vmin;
+            height: 48vmin;
+            border-radius: 50%;
+            background-color: #c8c8c8;
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            top: 0.8%;
+            transform: translateX(-50%);
+            z-index: 1;
+            animation: slideLeft 1.5s 1s forwards;
+        }
+        .contacts {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            z-index: 0;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            .contact-wrapper {
+                width: max-content;
+                transition: transform 2s ease;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                overflow: hidden;
+                i {
+                    font-size: 5vmin;
+                    padding: 1vmin;
+                    position: relative;
+                    cursor: pointer;
+                }
+                p.contact-info, a.contact-info {
+                    background-color: g.$primaryBg;
+                    padding: 0.4vmin 0.6vmin;
+                    position: relative;
+                    border-bottom: 2px solid g.$secondaryColor;
+                    border-radius: 0.5vmin;
+                    color: g.$primaryBg;
+                    clip-path: inset(0 100% 0 0);
+                    box-shadow: none;
+                    text-shadow: none;
+                    transition: clip-path 0.5s, 
+                                box-shadow 0.5s 0.3s, 
+                                color 1s 0.5s; 
+                    font-size: 2.6vmin;                    
+                }
+                .contact-info.active {
+                    clip-path: inset(0 0 0 0);
+                    box-shadow: 0.3vmin 0.3vmin 0.6vmin rgba(0, 0, 0, 0.247) inset,
+                                -0.1vmin -0.1vmin 0.5vmin rgba(0, 0, 0, 0.295) inset;
+                    color: g.$primaryColor;
+                }
+            }
+        }
+        h2 {
+            position: absolute;
+            animation: flyFromTop 1s forwards linear;
+            color: g.$primaryBg;
+            font-size: 12vmin;
+        }
+        .title {
+            margin: 0 auto;
+            padding: 4vmin;
+            border-top: g.$solid;
+            position: relative;
+            top: -2vmin;
+            animation: rotateTwoDeg 1.5s 0.7s forwards;
+            min-width: 80%;
+            text-align: right;
+        }
+    }
+    .fa-arrow-circle-down {
+        position: absolute;
+        bottom: 6vmin;
+        left: 50%;
+        transition: translateX(-50%);
+        font-size: 30px;
+    }
+}

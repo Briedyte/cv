@@ -1,0 +1,4 @@
+@use 'colors' as c;
+
+$solid: 3px solid c.$primaryColor;
+$dashed: 3px dashed c.$primaryColor;

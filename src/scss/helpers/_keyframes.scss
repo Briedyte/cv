@@ -1,0 +1,62 @@
+@use "../globals/colors" as c;
+
+@keyframes fadeIn {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes grow {
+    100% {       
+        box-shadow: 0 0 0 0.2vmin c.$secondaryColor,
+        0.1vmin 0.1vmin 0.3vmin c.$primaryBg inset,
+        1vmin 0 0 1vmin c.$primaryBg inset;
+    }
+}
+
+
+//Header circle animation
+@keyframes slideLeft {
+    100% {
+        left: 48%;
+        top: 2%;
+    }
+}
+
+//info icon animation
+@keyframes flyFromTop {
+    0% {
+        color: c.$primaryBg;
+        top: 3vmin;
+    }
+    75% {
+        top: 42vmin;
+        transform: rotate(6deg);
+    }
+    100% {
+        top: 35vmin;
+        transform: rotate(8deg);
+        display: block;
+        color: c.$secondaryColor;
+    }
+}
+
+
+@keyframes rotateTwoDeg {
+    100% {
+        transform: rotate(-2deg);
+    }
+}
+
+@keyframes fullRotation {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulsateDown {
+    100% {
+        bottom: 4.5%;
+    }
+}
+

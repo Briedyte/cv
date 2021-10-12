@@ -1,0 +1,82 @@
+@use '../globals/' as g;
+@use '../components/' as c;
+
+.additional-info {
+    margin-top: 40px; 
+    background-color: g.$secondaryBg;
+    padding: 2rem;
+    box-shadow: -5px 0 5px black;
+    p:not(.descr) {
+        max-width: 900px;
+        margin: 2rem auto;
+        padding: 10vmin 1.5rem;
+        font-size: 1.2rem;
+        border-right: g.$dashed;
+        a {
+            font-size: 1.2rem;
+            color: g.$link;
+        }
+    }
+    h2 {
+        text-align: right;
+        margin: 0 20rem 0 auto;
+    }
+    .img-container{
+        width: 90vmin;
+        margin: 0 auto;
+        max-width: 90vw;
+        .descr {
+            background-color: g.$primaryBg;
+            padding: 1rem;
+            font-style: italic;
+            box-shadow: -0.3vmin 0 1vmin rgba(0, 0, 0, 0.616); 
+        }
+        .img-comparison {
+            margin: 0 auto;
+            position: relative;
+            height: 70vmin;
+            width: 100%;
+            overflow: hidden;
+            .img-wrapper {
+                width: 100%;
+                height: 100%;
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    position: absolute;
+                    box-shadow: 0.3vmin 0 1vmin rgba(0, 0, 0, 0.616); 
+                }
+                img:last-child {
+                    clip-path: inset(0 0 0 50%);
+
+                }
+            }
+            input[type=range] {
+                position: absolute;
+                bottom: 20%;
+                left: -1.2rem;
+                z-index: 10;
+                width: calc(100% + 2.4rem);
+                background: transparent;
+                -webkit-appearance: none;
+                -webkit-tap-highlight-color: transparent;
+            }
+            input[type=range]::-webkit-slider-thumb{
+                -webkit-appearance: none;
+                border: 0 solid #ffffff;
+                border-radius: 0;
+                height: 2rem;
+                width: 2rem;
+                border-radius: 50%;
+                border:4px solid g.$primaryColor;
+                background: url("../images/arrows.png"), rgba(65, 65, 65, 0.623);
+                background-size: contain;
+                cursor: ew-resize;
+            }
+            input[type=range]::-moz-range-thumb {
+                @extend .sliderThumb;
+            }
+        }        
+    }
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"   content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Teko:wght@500&display=swap" rel="stylesheet"> 
+    <title>briedyte.lt</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <div class="preload">
+        <div class="circle"></div>
+    </div>
+
+
+    <header>
+        <ul>
+            <li><a href="pdf/cv.pdf" target="_blank">Resume in .pdf</a></li>
+            <li><a href="#">Source code of this page is also on GitHub</a></li>
+        </ul>
+        <div class="intro-content">
+            <div class="profile-img">
+                <img src="images/myself10.png">
+            </div>
+            <div class="circle"></div>
+            <div class="contacts" data-left="21" data-top="-22">
+                <div class="contact-wrapper">
+                    <i class="fas fa-envelope"></i>
+                    <p class="contact-info">em.briedyte@gmail.com</p>
+                </div>
+                <div class="contact-wrapper">
+                    <i class="fas fa-phone-square-alt"></i>
+                    <p class="contact-info">+370 621 75412</p>
+                </div>
+                <div class="contact-wrapper">
+                    <i class="fab fa-linkedin" ></i>
+                    <a href="https://www.linkedin.com/in/briedyte" class="contact-info">Click to visit</a>
+                </div>  
+            </div>
+            <h2>CV</h2>
+            <div class="title">
+                <h1>Emilija Briedytė</h1>
+                <p>Entry level front-end developer.</p>
+            </div>
+        </div>
+        <a href="#profile"><i class="fas fa-arrow-circle-down"></i></a>
+    </header>
+
+
+    <p id="profile">
+        I graduated from two courses organised by Vilnius Coding school since I am seeking 
+        to retrain as a web developer. As much as I enjoy expanding my knowledge by 
+        watching endless youtube videos, I am more than eager to master all those best
+        practices that comes with... well... practice.
+    </p>
+
+    <div class="lightbox-container">
+        <img src="images/certificates/certificate1.jpg" alt="Certificate">
+    </div>
+
+    <section id="cv-components">
+        <div class="cv-grid">
+
+            <div class="cv-titles">
+                <h2>Courses</h2>
+                <h2>Skills</h2>
+                <h2>Education</h2>
+            </div>
+
+            <div class="cv-graphics">
+                <div class="graphics-row">
+                    <div class="graphic-section certificates">
+                        <div class="img-wrapper">
+                            <img class="certificate" src="images/certificates/certificate1-sm.png" 
+                                                     data-imagesrc="images/certificates/certificate1.png" alt="Certificate">
+                            <i class="fas fa-search-plus"></i>                                             
+                        </div>
+                        <div class="img-wrapper">
+                            <img class="certificate" src="images/certificates/certificate2-sm.png" 
+                                                     data-imagesrc="images/certificates/certificate2.png" alt="Certificate">
+                            <i class="fas fa-search-plus"></i>                                              
+                        </div>                           
+                    </div>
+                    <div class="graphic-section logos">
+                        <h3>Some of the technologies I have been working with</h3>
+                        <img src="images/logos/bootstrap.png" alt="Bootstrap">
+                        <img src="images/logos/photoshop.png" alt="Adobe Photoshop">
+                        <img src="images/logos/premiere.png" alt="Adobe Pemiere">
+                        <img src="images/logos/xd.png" alt="Adobe Xd">
+                        <img src="images/logos/figma.png" alt="Figma">
+                        <img src="images/logos/wordpress.png" alt="Wordpress">
+                        <img src="images/logos/docker.png" alt="Docker">
+                        <img src="images/logos/sass.png" al="Sass">
+                    </div>
+                    <div class="graphic-section education">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                </div>   
+            </div>
+
+            <div class="cv-text">
+                <div class="text-section">
+                    <div class="text-content" data-id="0">
+                        <h3>PHP Academy</h3>
+                        <p>Duration of the course: 150 hours</p>
+                        <p>Gradutaion date: August 11, 2021 </p>
+                        <h3>Full-stack Web Development course</h3>
+                        <p>Duration of the course: 72 hours</p>
+                        <p>Gradutaion date: March 9, 2021 </p>
+                    </div>
+                </div>  
+                <div class="text-section">
+                    <div class="text-content" data-id="1">  
+                        <ul class="separated">
+                            <li>I feel comfortable working with HTML and CSS.</li>
+                            <li>I am getting more and more friendly with Vanilla JavaScript.</li>
+                            <li>I have some knowledge of PHP.  In PHP Academy course I used Laravel for my graduation project.</li>
+                            <li>As you read this CV I am most likely watching videos on React.</li>
+                        </ul>
+                        <h3>Languages</h3>
+                        <ul>
+                            <li>Lithuanian;</li>
+                            <li>English;</li>
+                            <li>I can read in French if that is really necessary.</li>
+                        </ul>
+                    </div>    
+                </div>
+                <div class="text-section">
+                    <div class="text-content" data-id="2">  
+                        <h3>2017-2018</h3>
+                        <p class="school">Kupiškis Technology and Business school</p>
+                        <p>Vocational degree in carpentry</p>
+
+                        <h3>2013-2017</h3>
+                        <p class="school">Lithuanian Music and Theatre Academy</p>
+                        <p>Bachelor's degree in Playwriting and Screenwriting</p>
+
+                        <h3>2012-2013</h3>
+                        <p class="school">Brighton Film School</p>
+                        <p>Diploma in filmmaking</p>
+                    </div>   
+                </div>
+            </div>
+        </div>
+        <i class="fas fa-chevron-down"></i>
+    </section>
+    
+    <section class="additional-info">
+        <h2>Before retraining...</h2>
+        <p>
+            Since my high school graduation in 2008 I have been freelancing as a photographer
+            and videographer. For this reason I opened my own company E. Briedytės IĮ 
+            TEma in 2013.
+        </p>
+        
+        <div class="img-container">
+            <p class="descr">My favorite part of the job is editing and retouching images:</p>
+            <div class="img-comparison">
+                <div class="img-wrapper">
+                    <img src="images/retouching/img_2.jpg">
+                    <img src="images/retouching/img_1.jpg">
+                </div>
+                <input type="range" min="0" max="100" value="50" step="any" autocomplete="off">
+            </div>
+        </div>        
+
+        <p>
+            2013-2021 I was the owner of regional news website 
+            <a href="https://www.temainfo.lt" target="_blank">temainfo.lt</a>.
+            I was writing articles, creating photo and video content, administrating the
+             website itself.<br>You can still visit it, even thoung we only keep it for the 
+             archive and the website is not as it used to be.
+        </p>
+    </section>
+
+    <script src="https://kit.fontawesome.com/5d9fbd6aee.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>    

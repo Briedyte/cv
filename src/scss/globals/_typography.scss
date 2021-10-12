@@ -1,0 +1,41 @@
+@use '../helpers/mediaQueries' as m;
+@use 'colors' as c;
+
+
+* {
+  font-size: 22px;
+  @include m.responsive(sm){
+    font-size: 18px;
+  }
+}
+
+* {
+  color: c.$primaryColor;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family:'Teko', sans-serif;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+
+p, li, a{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+}
+
+
+h1 {
+  font-size: 10vmin;
+  line-height: 9vmin;  
+}
+
+h2 {
+  font-size:3rem;
+  line-height: 2.7rem;
+}
+
+h3 {
+  font-size:1.4rem;
+  line-height: 1.6rem;
+}
